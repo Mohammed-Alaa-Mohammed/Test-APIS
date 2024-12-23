@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+
+  <!-- تحديد لون الثيم للمتصفح -->
+<meta name="theme-color" content="#121212">
+
+<!-- تحديد اللغة الافتراضية للمحتوى (العربية في هذه الحالة) -->
+<meta property="og:locale" content="ar_AR">
+
+<!-- تحديد لغة بديلة: الإنجليزية (الولايات المتحدة) -->
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- تحديد لغة بديلة أخرى: الفرنسية (فرنسا) But it-->
+<meta property="og:locale:alternate" content="fr_FR">
+
+<!--  -->
+
+<meta property="og:locale" content="ar_AR"> <!-- اللغة الافتراضية -->
+<meta property="og:locale:alternate" content="en_US"> <!-- لغة بديلة -->
+<meta property="og:locale:alternate" content="fr_FR"> <!-- لغة بديلة إضافية -->
+
+<!--    -->
+
+  <meta property="og:title" content="Test API'S | Mohammed Alaa">
+<!-- يظهر كعنوان معاينة المشاركة -->
+
+<meta property="og:description" content="Test any API Link">
+<!-- يظهر كنص تحت العنوان -->
+
+<meta property="og:image" content="https://cdn3d.iconscout.com/3d/premium/thumb/api-9096236-7408692.png?f=webp">
+<!-- يظهر كصورة في المعاينة -->
+
+<meta property="og:url" content="">
+<!-- رابط الصفحة الذي سيتم مشاركته -->
+
+<meta property="og:type" content="website">
+<!-- نوع المحتوى (يمكن أن يكون: article، website، video، وغيرها) -->
+
+<meta property="og:site_name" content="Test API'S">
+<!-- يظهر كاسم الموقع في بعض المنصات -->
+
+<meta property="og:locale" content="ar_AR">
+<!-- تحديد لغة الصفحة (ar_AR للعربية، en_US للإنجليزية) -->
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- عرض وارتفاع الصورة لضمان جودتها -->
+
+<meta property="og:image:alt" content="Error in Web Icon">
+<!-- نص بديل للصورة إذا لم تظهر -->
+
+<meta content="author" name="Mohammed Alaa Mohammed">
+  
+<meta name="description" content="Test API'S Website">
+  
+<meta name="keywords" content="WEBSITE ,API , API'S , TEST,API'S TEST API ,TEST APIS , LINK , CHECK , APIS api ,testapis , test">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/api-9096236-7408692.png?f=webp">
+    <title>Test API'S | Mohammed Alaa</title>
+    <!-- ربط مكتبة Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- رابط مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* تحسينات على الخلفية والنص */
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f8f9fa; /* الوضع الفاتح */
+            color: #212529; /* اللون الافتراضي للنص */
+            direction:auto;
+        }
+
+        /* الوضع المظلم */
+        .dark-theme {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* تحسين الفوتر */
+       footer {
+
+    background-color: #2c3e50;  /* لون خلفية داكن */
+    color: #ecf0f1;             /* نص بلون فاتح */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+    border-radius: 0px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: background-color 0.3s, color 0.3s; /* انتقالات سلسة */
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #ffcb00;  /* لون نص روابط */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #e67e22;  /* تغيير لون الرابط عند التمرير */
+}
+
+
+
+footer .contact-info {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #bdc3c7;
+}
+
+footer .contact-info a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .contact-info a:hover {
+    color: #ffcb00;
+}
+
+footer.dark-theme {
+    background-color: #121212; /* وضع داكن */
+    color: #ffffff;
+}
+
+
+
+        /* تصميم الفورم */
+        .form-container {
+            max-width: 600px;
+            direction:auto;
+            margin: auto;
+        }
+
+        #api-result .alert {
+            word-wrap: break-word;
+        }
+
+        /* تحسين التنبيهات */
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        /* تحسين المكونات في الوضع المظلم */
+        .dark-theme .alert-info {
+            background-color: #1e2a33;
+            color: #bbdefb;
+        }
+
+        .dark-theme .alert-warning {
+            background-color: #6d6d6d;
+            color: #fff9c4;
+        }
+
+        .dark-theme .alert-success {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+
+        .dark-theme .alert-danger {
+            background-color: #e57373;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ناف بار -->
+<!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- الأيقونة داخل شريط التنقل -->
+            <a class="navbar-brand" href="#" id="navbar-brand" dir="rtl">
+                <img src="https://cdn-icons-png.flaticon.com/512/8488/8488719.png" alt="API Icon" width="35" height="30" class="d-inline-block align-text-top">
+                اختبار روابط الـ APIs
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" id="contact-link">اتصل بنا <i class="fas fa-envelope"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="language-toggle">تغيير اللغة <i class="fas fa-globe"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="theme-toggle">تغيير الوضع <i class="fas fa-moon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رسائل توضيحية -->
+    <div class="alert alert-info text-center mt-0" role="alert" id="alert-message" dir="rtl">
+        مرحبًا بك في أداة اختبار روابط الـ APIs! يمكنك اختبار الروابط هنا وحفظ تقارير الفحص.
+    </div>
+
+    <!-- اختبار API -->
+    <section id="api-test" class="container mt-5" dir="auto">
+        <h2 class="text-center mb-4" id="api-test-title">اختبار رابط API</h2>
+        <form id="api-form" class="form-container">
+            <div class="mb-3">
+                <label for="api-url" class="form-label" id="api-url-label">رابط الـ API</label>
+                <input type="url" class="form-control" id="api-url" required placeholder="أدخل رابط الـ API">
+            </div>
+            <button type="submit" class="btn btn-primary w-100" id="test-button" style="border-radius:25px; font-size:20px; font-weight:bold;">اختبار الرابط</button>
+        </form>
+        <div id="api-result" class="mt-4"></div>
+        <a id="download-report" class="btn btn-success w-100 mt-3" style="display: none; border-radius:25px; font-size:20px; font-weight:bold; ">تحميل التقرير</a>
+    </section>
+
+    <!-- فورم التواصل -->
+    <section id="contact" class="container mt-5" dir="rtl">
+        <h2 class="text-center mb-4" id="contact-title">اتصل بنا</h2>
+        <form id="contact-form" class="form-container">
+            <div class="mb-3">
+                <label for="name" class="form-label" id="name-label">الاسم:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label" id="email-label">البريد الإلكتروني:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label" id="message-label">الرسالة:</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100" id="send-button">إرسال</button>
+        </form>
+    </section>
+
+    <!-- فوتر -->
+    <footer dir="rtl">
+        <p>&copy; MOHAMMED ALAA 2024 اختبار روابط الـ APIs. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- ربط مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // التبديل بين اللغة
+        const languageToggle = document.getElementById('language-toggle');
+        const elementsInArabic = {
+            'navbar-brand': 'اختبار روابط الـ APIs',
+            'contact-link': 'اتصل بنا',
+            'language-toggle': 'تغيير اللغة',
+            'theme-toggle': 'تغيير الوضع',
+            'alert-message': 'مرحبًا بك في أداة اختبار روابط الـ APIs! يمكنك اختبار الروابط هنا وحفظ تقارير الفحص.',
+            'api-test-title': 'اختبار رابط API',
+            'api-url-label': 'رابط الـ API',
+            'test-button': 'اختبار الرابط',
+            'contact-title': 'اتصل بنا',
+            'name-label': 'الاسم:',
+            'email-label': 'البريد الإلكتروني:',
+            'message-label': 'الرسالة:',
+            'send-button': 'إرسال',
+            'privacy-policy': 'سياسة الخصوصية',
+            'terms-of-use': 'شروط الاستخدام'
+        };
+
+        const elementsInEnglish = {
+            'navbar-brand': 'API Link Tester',
+            'contact-link': 'Contact Us',
+            'language-toggle': 'Change Language',
+            'theme-toggle': 'Change Theme',
+            'alert-message': 'Welcome to the API link tester tool! You can test links here and save test reports.',
+            'api-test-title': 'Test API Link',
+            'api-url-label': 'API URL',
+            'test-button': 'Test Link',
+            'contact-title': 'Contact Us',
+            'name-label': 'Name:',
+            'email-label': 'Email:',
+            'message-label': 'Message:',
+            'send-button': 'Send',
+            'privacy-policy': 'Privacy Policy',
+            'terms-of-use': 'Terms of Use'
+        };
+
+        let currentLanguage = 'ar';
+
+        languageToggle.addEventListener('click', () => {
+            const elements = currentLanguage === 'ar' ? elementsInEnglish : elementsInArabic;
+            for (const id in elements) {
+                document.getElementById(id).textContent = elements[id];
+            }
+            currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+        });
+
+        // التبديل بين الوضع
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            document.querySelector('footer').classList.toggle('dark-theme');
+        });
+
+        // اختبار API
+        document.getElementById('api-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const apiUrl = document.getElementById('api-url').value;
+            const resultContainer = document.getElementById('api-result');
+            const downloadButton = document.getElementById('download-report');
+
+            try {
+                const startTime = Date.now();
+                const response = await fetch(apiUrl);
+                const endTime = Date.now();
+                const duration = endTime - startTime;
+
+                const status = response.ok ? 'النجاح' : 'الفشل';
+                const report = `
+                    <h3>نتائج اختبار API</h3>
+                    <p><strong>رابط الـ API:</strong> ${apiUrl}</p>
+                    <p><strong>الحالة:</strong> ${status}</p>
+                    <p><strong>الوقت المستغرق:</strong> ${duration}ms</p>
+                    <p><strong>رمز الاستجابة:</strong> ${response.status}</p>
+                `;
+                resultContainer.innerHTML = report;
+
+                // إعداد التقرير للتنزيل
+                const reportContent = `رابط الـ API: ${apiUrl}\nالحالة: ${status}\nالوقت المستغرق: ${duration}ms\nرمز الاستجابة: ${response.status}\n`;
+                const blob = new Blob([reportContent], { type: 'text/plain' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'api_test_report.txt';
+                downloadButton.style.display = 'block';
+                downloadButton.addEventListener('click', () => {
+                    link.click();
+                });
+
+            } catch (error) {
+                resultContainer.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>خطأ!</strong> فشل في الاتصال بالرابط أو الرابط غير صالح.
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

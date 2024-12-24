@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#2980b9">
+    <meta property="og:description" content="صحفة عرض جميع الكورسات المتاحة من تطوير : Mohammed Alaa Mohammed">
+  <meta name="description" content="مكتبة الأيقونات بتصميم 3D ومميزات متقدمة.">
+  <meta name="author" content="Icon Library Team">
+  <meta name="keywords" content="Icons, Font Awesome, Library, Social Icons, Download Icons, 3D Design">
+  <title>3D Icons</title>
+   <link rel="icon" type="image/png" href="/img/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e90ff;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #search {
+      width: 80%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    #filters button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1e90ff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #filters button:hover {
+      background-color: #0056a6;
+      transform: translateY(-4px);
+    }
+
+    #icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .icon {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .icon:hover {
+      transform: translateY(-8px);
+      box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #3e3e3e;
+      color: #fff;
+    }
+
+    #preview-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #preview-modal i {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    #preview-modal button {
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #preview-modal button:hover {
+      background-color: #0056a6;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    #class-code {
+      margin-top: 15px;
+      font-family: monospace;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      word-wrap: break-word;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #class-code button {
+      padding: 8px 16px;
+      background-color: #1e90ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #class-code button:hover {
+      background-color: #0056a6;
+    }
+
+    @media (max-width: 1200px) {
+      #filters button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      #search {
+        width: 70%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      #filters button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      #search {
+        width: 50%;
+      }
+
+      #icon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      #filters button {
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+
+      #search {
+        width: 90%;
+      }
+
+      #icon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 15px;
+      }
+
+      #search {
+        width: 80%;
+        padding: 10px;
+      }
+
+      #filters {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #filters button {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      #icon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      }
+
+      #preview-modal {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مكتبة الأيقونات ثلاثية الأبعاد</h1>
+    <input dir="rtl" type="text" id="search" placeholder="ابحث عن أيقونة...">
+    <div id="filters" dir="auto">
+      <button data-category="All">الكل</button>
+      <button data-category="Social">التواصل</button>
+      <button data-category="Tech">التقنية</button>
+      <button data-category="Media">الإعلام</button>
+      <button data-category="General">عام</button>
+    </div>
+  </header>
+  <main>
+    <div id="icon-grid"></div>
+  </main>
+  <div id="overlay"></div>
+  <div id="preview-modal">
+    <i id="preview-icon"></i>
+    <p id="preview-name"></p>
+    <div id="class-code">
+      <input type="text" id="class-text" readonly>
+      <button id="copy-btn">نسخ الكود</button>
+    </div>
+    <button id="download-btn">تحميل الأيقونة</button>
+  </div>
+  <footer>
+    <p>© 2024 مكتبة الأيقونات ثلاثية الأبعاد</p>
+      <b dir="rtl">جميع الحقوق محفوظة / Mohammed Alaa</b>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const icons = [];
+      const categories = ['Social', 'Tech', 'Media', 'General'];
+      const iconClasses = [
+        'fa-camera', 'fa-car', 'fa-user', 'fa-envelope', 'fa-bell',
+        'fa-cogs', 'fa-heart', 'fa-film', 'fa-mobile', 'fa-laptop',
+        'fa-gamepad', 'fa-rocket', 'fa-headphones', 'fa-home', 'fa-lock'
+      ];
+
+      // إنشاء أيقونات مختلفة
+      for (let i = 0; i < 500; i++) {
+        const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+        const randomIcon = iconClasses[Math.floor(Math.random() * iconClasses.length)];
+        icons.push({
+          name: `Icon ${i + 1}`,
+          class: `fas ${randomIcon}`,
+          category: randomCategory,
+        });
+      }
+
+      const iconGrid = document.getElementById('icon-grid');
+      const searchInput = document.getElementById('search');
+      const filters = document.querySelectorAll('#filters button');
+      const overlay = document.getElementById('overlay');
+      const modal = document.getElementById('preview-modal');
+      const previewIcon = document.getElementById('preview-icon');
+      const previewName = document.getElementById('preview-name');
+      const classText = document.getElementById('class-text');
+      const copyBtn = document.getElementById('copy-btn');
+      const downloadBtn = document.getElementById('download-btn');
+
+      function displayIcons(filteredIcons) {
+        iconGrid.innerHTML = '';
+        filteredIcons.forEach(icon => {
+          const div = document.createElement('div');
+          div.className = 'icon';
+          div.innerHTML = `<i class="${icon.class}" style="font-size: 24px;"></i><p>${icon.name}</p>`;
+          div.addEventListener('click', () => {
+            previewIcon.className = icon.class;
+            previewName.textContent = icon.name;
+            classText.value = icon.class;
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+          });
+          iconGrid.appendChild(div);
+        });
+      }
+
+      searchInput.addEventListener('input', () => {
+        const searchText = searchInput.value.toLowerCase();
+        const filteredIcons = icons.filter(icon => icon.name.toLowerCase().includes(searchText));
+        displayIcons(filteredIcons);
+      });
+
+      filters.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.getAttribute('data-category');
+          const filteredIcons = category === 'All' ? icons : icons.filter(icon => icon.category === category);
+          displayIcons(filteredIcons);
+        });
+      });
+
+      overlay.addEventListener('click', () => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+      });
+
+      copyBtn.addEventListener('click', () => {
+        classText.select();
+        document.execCommand('copy');
+        alert('تم نسخ الكود!');
+      });
+
+      downloadBtn.addEventListener('click', () => {
+        alert('تحميل الأيقونة...');
+      });
+
+      displayIcons(icons);
+    });
+  </script>
+</body>
+</html>
